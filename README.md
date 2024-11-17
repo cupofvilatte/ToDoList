@@ -10,9 +10,7 @@ The List items classes are connected using inheritance. This is to provide versa
 
 The goal of this project was to give myself an introduction to Java and build something that can be useful. This project is useful for all people with busy lives. Many people have reported success by creating a checklist and marking off the items as they get done, so the goal of this project is to replicate that in a digital environment.
 
-{Provide a link to your YouTube demonstration. It should be a 4-5 minute demo of the software running and a walkthrough of the code. Focus should be on sharing what you learned about the language syntax.}
-
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://youtu.be/eBdRmIAE5nk)
 
 # Development Environment
 
