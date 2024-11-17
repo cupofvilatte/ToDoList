@@ -10,13 +10,12 @@ public class ToDoList {
 
     public void addItem(ToDoListItem item) {
         items.add(item);
-        System.out.println("Successfully added item to list.");
     }
 
     public void removeItem(int index) {
         if (index >= 0 && index < items.size()) {
             ToDoListItem removedItem = items.remove(index);
-            System.out.println("Item successfully removed.");;
+            System.out.println("Item successfully removed:" + removedItem);
         } else {
             System.out.println("Item could not be removed.");
         }

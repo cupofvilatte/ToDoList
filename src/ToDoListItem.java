@@ -1,5 +1,3 @@
-import java.time.LocalDate;
-
 public abstract class ToDoListItem {
     private String name;
     private boolean isComplete;

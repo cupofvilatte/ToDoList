@@ -1,22 +1,20 @@
-import java.time.LocalDate;
-
 public class LimitedRepeatListItem extends ToDoListItem {
-    private LocalDate dueDate;
+    private String dueDate;
     private int totalCompletionsNeeded;
     private int completions;
 
-    public LimitedRepeatListItem(String name, LocalDate dueDate, int totalRepeats) {
+    public LimitedRepeatListItem(String name, String dueDate, int totalCompletionsNeeded) {
         super(name);
         this.dueDate = dueDate;
         this.totalCompletionsNeeded = totalCompletionsNeeded;
         this.completions = 0;
     }
 
-    public LocalDate getDueDate() {
+    public String getDueDate() {
         return dueDate;
     }
 
-    public void setDueDate(LocalDate dueDate) {
+    public void setDueDate(String dueDate) {
         this.dueDate = dueDate;
     }
 

@@ -1,18 +1,16 @@
-import java.time.LocalDate;
-
 public class SingleUseListItem extends ToDoListItem {
-    private LocalDate dueDate;
+    private String dueDate;
 
-    public SingleUseListItem(String name, LocalDate dueDate) {
+    public SingleUseListItem(String name, String dueDate) {
         super(name);
         this.dueDate = dueDate;
     }
 
-    public LocalDate getDueDate() {
+    public String getDueDate() {
         return dueDate;
     }
 
-    public void setDueDate(LocalDate dueDate) {
+    public void setDueDate(String dueDate) {
         this.dueDate = dueDate;
     }
 
