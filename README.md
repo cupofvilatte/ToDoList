@@ -35,6 +35,6 @@ The goal of this project was to give myself an introduction to Java and build so
 
 {Make a list of things that you need to fix, improve, and add in the future.}
 
-- Item 1
-- Item 2
+- Improve code security by fixing warnings for resource leaks
+- Improve code security by taking extra measures for private variables
 - Item 3
