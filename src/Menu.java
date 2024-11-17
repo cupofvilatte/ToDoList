@@ -1,4 +1,6 @@
 import java.util.Scanner;
+// import above for user input
+
 
 public class Menu {
     private ToDoList toDoList;
@@ -7,6 +9,7 @@ public class Menu {
         this.toDoList = toDoList;
     }
 
+    // display all choices for the menu
     public void displayOptions() {
         System.out.println("Please select an option:");
         System.out.println("1. View List");
@@ -40,6 +43,7 @@ public class Menu {
         return choice;
     }
 
+    // method that does most of the work for handling the user input
     public void handleOption(int choice) {
         Scanner scanner = new Scanner(System.in);
 
@@ -50,6 +54,8 @@ public class Menu {
             case 2:
                 System.out.print("Enter the number of the item to check off: ");
                 String input = scanner.nextLine();
+                // catch for errors if invalid input
+                // if it works, check off the desired item
                 try {
                     int index = Integer.parseInt(input) - 1; 
                     toDoList.checkOffItem(index);
@@ -58,6 +64,8 @@ public class Menu {
                 }
                 break;
             case 3:
+            // break into additional menu for list item type
+            // future implementation will separate this as a function to be called into case 3 for simplicity and readability
             System.out.println("What type of item would you like to add?");
             System.out.println("1. Single-Use Item");
             System.out.println("2. Repeated Item");
@@ -65,9 +73,11 @@ public class Menu {
             System.out.print("Enter your choice (1-3): ");
             
             int itemType = scanner.nextInt();
-            scanner.nextLine(); // Consume newline
+            scanner.nextLine(); // consume newline
         
+            // use switch case to ask user questions based on the type of goal to accurately add the information into the list
             switch (itemType) {
+                // single completion item
                 case 1:
                     System.out.print("Enter the name of the item: ");
                     String singleName = scanner.nextLine();
@@ -76,6 +86,7 @@ public class Menu {
                     toDoList.addItem(new SingleUseListItem(singleName, singleDueDate));
                     System.out.println("Single-use item added.");
                     break;
+                // routine item
                 case 2:
                     System.out.print("Enter the name of the item: ");
                     String repeatedName = scanner.nextLine();
@@ -84,6 +95,7 @@ public class Menu {
                     toDoList.addItem(new RepeatedListItem(repeatedName, repetition));
                     System.out.println("Repeated item added.");
                     break;
+                // checklist item
                 case 3:
                     System.out.print("Enter the name of the item: ");
                     String limitedName = scanner.nextLine();
@@ -101,7 +113,9 @@ public class Menu {
                 break;
             case 4:
                 System.out.print("Enter the number of the item to delete: ");
-                String deleteInput = scanner.nextLine(); // Consume newline
+                String deleteInput = scanner.nextLine(); // consume newline
+                // catch for errors if wrong input
+                // use index to delete list items
                 try {
                     int index = Integer.parseInt(deleteInput) - 1;
                     toDoList.removeItem(index);
@@ -109,6 +123,7 @@ public class Menu {
                     System.out.println("Invalid input. Please enter a valid choice.");
                 }
                 break;
+            // quit the program
             case 5:
                 System.out.println("Exiting the program. Goodbye!");
                 break;
