@@ -14,6 +14,7 @@ public class Menu {
         System.out.println("3. Add Item");
         System.out.println("4. Delete Item");
         System.out.println("5. Quit");
+        System.out.println("===================================");
     }
 
     public int getUserChoice() {
@@ -47,7 +48,7 @@ public class Menu {
                 toDoList.displayList();
                 break;
             case 2:
-                System.out.print("Enter the name of the item to check off: ");
+                System.out.print("Enter the number of the item to check off: ");
                 String input = scanner.nextLine();
                 try {
                     int index = Integer.parseInt(input) - 1; 
@@ -99,7 +100,7 @@ public class Menu {
             }
                 break;
             case 4:
-                System.out.print("Enter the name of the item to delete: ");
+                System.out.print("Enter the number of the item to delete: ");
                 String deleteInput = scanner.nextLine(); // Consume newline
                 try {
                     int index = Integer.parseInt(deleteInput) - 1;

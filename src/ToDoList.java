@@ -35,12 +35,14 @@ public class ToDoList {
         if (items.isEmpty()) {
             System.out.println("Your to-do list is empty!");
         } else {
+            System.out.println("===================================");
             System.out.println("Your To-Do List:");
             for (int i = 0; i < items.size(); i++) {
                 ToDoListItem item = items.get(i);
                 System.out.println((i + 1) + ". " + item.getName() + " - " +
                     (item.isComplete() ? "Complete" : "Incomplete"));
             }
+            System.out.println("===================================");
         }
     }
 
